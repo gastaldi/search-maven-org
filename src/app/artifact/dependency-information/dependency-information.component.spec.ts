@@ -98,4 +98,11 @@ describe('DependencyInformationComponent', () => {
     let result = component.provideTemplateOnValue("kotlin");
     expect(result).toBe(expected);
   });
+
+  it('should create a valid JBang template', () => {
+    let expected = `//DEPS ${g}:${a}:${v}`;
+    let result = component.provideTemplateOnValue("jbang");
+    expect(result).toBe(expected);
+  });
+
 });
